@@ -105,6 +105,19 @@
   };
 };
 
+&csi2_dphy_hw {
+    status = "okay";
+};
+
+&i2c4 {
+    status = "okay";
+    clock-frequency = <400000>;
+    pinctrl-0 = <&i2c4m2_xfer>;
+};
+
+&rgb{
+    status = "disabled";
+};
 
 /**********ETH**********/
 &gmac {

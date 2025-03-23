@@ -35,6 +35,12 @@ int rk_video_get_max_rate(int stream_id, int *value);
 int rk_video_set_max_rate(int stream_id, int value);
 int rk_video_get_RC_mode(int stream_id, const char **value);
 int rk_video_set_RC_mode(int stream_id, const char *value);
+
+// Unix socket functionality
+int rk_unix_socket_init();
+int rk_unix_socket_deinit();
+int rk_unix_socket_write_h264_data(void *data, size_t len, uint64_t pts);
+
 int rk_video_get_output_data_type(int stream_id, const char **value);
 int rk_video_set_output_data_type(int stream_id, const char *value);
 int rk_video_get_rc_quality(int stream_id, const char **value);
