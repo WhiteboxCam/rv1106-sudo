@@ -1,0 +1,26 @@
+{
+    "name": "Luckfox Pico SDK Development",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": "..",
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools",
+                "ms-vscode.cpptools-extension-pack",
+                "ms-vscode.cmake-tools",
+                "twxs.cmake"
+            ],
+            "settings": {
+                "terminal.integrated.defaultProfile.linux": "bash"
+            }
+        }
+    },
+    "remoteUser": "vscode",
+    "mounts": [
+        "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached"
+    ],
+    "workspaceFolder": "/workspace",
+    "postCreateCommand": "cd /workspace && echo 'Luckfox Pico SDK environment ready.'"
+}

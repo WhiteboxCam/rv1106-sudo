@@ -100,11 +100,13 @@ export RK_CAMERA_SENSOR_CAC_BIN="CAC_sc4336_OT01_40IRC_F16"
 # build ipc web backend
 #export RK_APP_IPCWEB_BACKEND=y
 
+export RK_APP_TYPE=SUDOCAM
+
 # enable install app to oem partition
-export RK_BUILD_APP_TO_OEM_PARTITION=y
+export RK_BUILD_APP_TO_OEM_PARTITION=n
 
 # enable rockchip test
-export RK_ENABLE_ROCKCHIP_TEST=y
+export RK_ENABLE_ROCKCHIP_TEST=n
 
 # enable rockchip wifi
 export RK_ENABLE_WIFI=y

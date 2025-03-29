@@ -1485,14 +1485,14 @@ function __PACKAGE_USERDATA() {
 	userdata_media="$RK_PROJECT_PATH_MEDIA/install_to_userdata"
 	userdata_app="$RK_PROJECT_PATH_APP/install_to_userdata"
 
-	if [ -d "$userdata_media" ]; then
+	if [ -d "$userdata_media" ];then
 		if [ "$(ls -A $userdata_media)" ]; then
 			cp -rfa $RK_PROJECT_PATH_MEDIA/install_to_userdata/* $RK_PROJECT_PACKAGE_USERDATA_DIR
 		fi
 	fi
-	if [ -d "$userdata_app" ]; then
+	if [ -d "$userdata_app" ];then
 		if [ "$(ls -A $userdata_app)" ]; then
-			cp -rfa $RK_PROJECT_PATH_MEDIA/install_to_userdata/* $RK_PROJECT_PACKAGE_USERDATA_DIR
+			cp -rfa $RK_PROJECT_PATH_APP/install_to_userdata/* $RK_PROJECT_PACKAGE_USERDATA_DIR
 		fi
 	fi
 }
@@ -2550,10 +2550,9 @@ function build_firmware() {
 
 	# package a empty userdata parition image
 	mkdir -p $RK_PROJECT_PACKAGE_USERDATA_DIR
-	if [ "$RK_ENABLE_FASTBOOT" != "y" ]; then
-		__PACKAGE_USERDATA
-		__RUN_POST_BUILD_USERDATA_SCRIPT
-	fi
+	
+	__PACKAGE_USERDATA
+
 	build_mkimg userdata $RK_PROJECT_PACKAGE_USERDATA_DIR
 
 	build_tftp_sd_update
