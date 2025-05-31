@@ -107,7 +107,7 @@
  
  /**********SD-CARD*********/
  &sdio {
-	 max-frequency = <25000000>;
+	 max-frequency = <50000000>;
 	 no-sdio;
 	 no-mmc;
 	 supports-sd;
@@ -139,6 +139,11 @@
  };
  
  /**********BT**********/
+ &i2c4 {
+    status = "okay";
+    clock-frequency = <400000>;
+    pinctrl-0 = <&i2c4m2_xfer>;
+};
  &uart1 {
 	 status = "okay";
 	 pinctrl-names = "default";
@@ -152,7 +157,7 @@
 		 };
 	 };
  };
- 
+
  /**********SPI**********/
  &spi0 {
 	 status = "disabled";

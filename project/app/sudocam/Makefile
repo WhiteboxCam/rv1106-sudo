@@ -33,7 +33,7 @@ sudocam-build:
 	cp $(CURRENT_DIR)/RkLunch-stop.sh $(PKG_BIN)/bin/RkLunch-stop.sh
 	# cp $(CURRENT_DIR)/dropbear.sh $(PKG_BIN)/bin/dropbear.sh
 	# cp $(CURRENT_DIR)/fb_init $(PKG_BIN)/share/fb_init
-	cp -rfa $(CURRENT_DIR)/sudocam $(PKG_BIN)/install_to_userdata
+	cp -rfa $(CURRENT_DIR)/bin $(PKG_BIN)/install_to_userdata
 	$(call MAROC_COPY_PKG_TO_APP_OUTPUT, $(RK_APP_OUTPUT), $(PKG_BIN))
 
 clean:

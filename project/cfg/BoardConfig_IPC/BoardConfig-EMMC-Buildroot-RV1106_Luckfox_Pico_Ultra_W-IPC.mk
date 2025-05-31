@@ -8,7 +8,7 @@ export LF_ORIGIN_BOARD_CONFIG=BoardConfig-EMMC-Buildroot-RV1106_Luckfox_Pico_Ult
 export RK_CHIP=rv1106
 
 # app config
-export RK_APP_TYPE=RKIPC_RV1106
+export RK_APP_TYPE=SUDOCAM
 
 # Config CMA size in environment
 export RK_BOOTARGS_CMA_SIZE="66M"
